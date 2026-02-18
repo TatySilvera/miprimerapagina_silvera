@@ -1,9 +1,19 @@
-Proyecto Chiquerrimo Accesorios 
-Chiquerrimo es Mi emprendimiento personal, y esta es una manera de poder mostrar mis productos con sus precios ademas del instagram.
+# Chiquerrimo Accesorios 🌸
+Proyecto: Mi Primera Página 
 
-Inicio: Entrar a / para ver la estética pastel que elegi, ya que mis productos se destacan por esos colores y diseños mas femeninos.
+¡Bienvenida a la tienda oficial de **Chiquerrimo Accesorios**! Este proyecto es una plataforma de e-commerce desarrollada con **Django**.
+Donde puedo mostrarles a todos mis productos realizados de manera artesanal con sus imagenes y respectivos precios e ir mas
+alla de solo mostrarlos en instagram.
 
-Carga: Usar el panel /admin para cargar Neceseres, artículos de Beb y otros.
-De aca a un tiempo he decidido bajar la cantitdad de articulos por falta de tiempo, por eso no cree mas clases.
+✨Sus Funcionalidades:
+* **Catálogo:** Secciones de Necessers, Artículos de Bebé y Estuches, espero agregar mas a futuro.
+* **Buscador:** Filtra productos por nombre en todas las categorías.
+* **Panel de Administración:** Carga de productos e imágenes centralizada.
 
-Búsqueda: Usar la sección /buscar/ para encontrar productos por nombre.
+## 🛠️ Tecnologías usadas:
+* Python 
+* Django
+* HTML/CSS
+* SQLite (Base de datos)
+
+**Desarrollado por:** Taty Silvera
