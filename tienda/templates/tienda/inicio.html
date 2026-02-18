@@ -1,0 +1,48 @@
+{% extends "tienda/base.html" %}
+
+{% block content %}
+    <h1 style="text-align: center; color: #45effe;">Los mejores Necesser estan aca!</h1>
+    <p style="text-align: center;">Descubre un mundo practico y muy chic...</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+        {% for n in necesseres %}
+            <div style="border: 2px solid #ffb7c5; border-radius: 15px; padding: 15px; background: white; width: 250px; text-align: center;">
+                {% if n.imagen %}
+                    <img src="{{ n.imagen.url }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+                {% endif %}
+                <h3 style="color: #555;">{{ n.nombre }}</h3>
+                <p style="color: #D81B60; font-weight: bold;">${{ n.precio }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2 style="text-align: center; color: #4bf3f3;">Sección Bebé</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+        {% for b in articulos_bebe %}
+            <div style="border: 2px solid #ffb7c5; border-radius: 15px; padding: 15px; width: 200px; text-align: center;">
+                {% if b.imagen %}
+                    <img src="{{ b.imagen.url }}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                {% endif %}
+                <h3>{{ b.nombre }}</h3>
+                <p>${{ b.precio }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2 style="text-align: center; color: #3debeb;">Estuches</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+        {% for e in estuches %}
+            <div style="border: 2px solid #ffb7c5; border-radius: 15px; padding: 15px; width: 200px; text-align: center;">
+                {% if e.imagen %}
+                    <img src="{{ e.imagen.url }}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                {% endif %}
+                <h3>{{ e.nombre }}</h3>
+                <p>${{ e.precio }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div style="text-align: center; margin: 40px;">
+        <a href="{% url 'buscar' %}" style="background: #ffb7c5; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Ir al Buscador</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tienda"
+		},
+		{
+			"path": "../venv"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,27 @@
+{% extends "tienda/base.html" %}
+
+{% block content %}
+<h2>Buscar en Chiquerrimo</h2>
+
+<form action="{% url 'buscar' %}" method="GET">
+    <input type="text" name="nombre" placeholder="Ej: Necesser floral..." value="{{ query|default:'' }}">
+    <button type="submit" class="btn">Buscar</button>
+</form>
+
+<hr>
+
+{% if productos %}
+    <h3>Resultados:</h3>
+    <ul>
+    {% for p in productos %}
+        <li>{{ p.nombre }} - ${{ p.precio }}</li>
+    {% endfor %}
+    </ul>
+{% elif query %}
+    <p>No encontramos accesorios con ese nombre. ¡Sigue buscando!</p>
+{% endif %} <form action="{% url 'buscar' %}" method="GET" style="text-align: center; margin-bottom: 20px;">
+    <input type="text" name="nombre" placeholder="¿Qué buscas?" style="padding: 10px; border-radius: 20px; border: 1px solid #ffb7c5;">
+    <button type="submit" style="background: #f020c3; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer;">Buscar</button>
+</form>
+
+{% endblock %}
